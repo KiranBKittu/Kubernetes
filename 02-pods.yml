@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: pod # type of resource example pod
+metadata:
+  name: pod-01 # name of the pod
+containers:
+  - name: nginx # name of the container
+    image: nginx:1.14.2 # image for the container
+    ports:
+      - containerPort: 80 # container ports
