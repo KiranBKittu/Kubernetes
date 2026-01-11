@@ -1,0 +1,8 @@
+apiversion: v1
+kind: Pod
+metadata:
+ - name: error_crash
+spec:
+  containers:
+    - name: almalinux
+      image: almalinux:9
