@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfiMap
+metadata:
+  name: pod-Config
+data:
+  course: "devops"
+  duration: "120 hours"
+  trainer: "shiva"
