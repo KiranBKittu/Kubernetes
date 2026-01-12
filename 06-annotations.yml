@@ -2,7 +2,10 @@ apiVersion: v1
 kind: Pod
 metada:
   name: annotaions-01
-  # this are same like labels but it takes special codes also and it takes lengthy text
-  annotations: 
+  annotations: # this are same like labels but it takes special codes also and it takes lengthy text
     git.url: "https://github.com/KiranBkittu/K8S-Practice/tree/main"
     imageregistry: "https://github.com/KiranBkittu/K8S-Practice.git"
+spec:
+  containers:
+    - name: nginx
+      image: nginx
