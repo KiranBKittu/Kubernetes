@@ -6,6 +6,6 @@ spec:
   containers:
     - name: nginx
       image: nginx
-      envFrom:
+      envFrom: # it takes from 09-config-map data as key value pairs
         - configMapRef:
             name: pod-config
