@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: error_image
+  name: pod-error-1
 spec:
   containers:
-    - name: image-1
+    - name: nginx
       image: nginxxx ### image pull backoff error will come
