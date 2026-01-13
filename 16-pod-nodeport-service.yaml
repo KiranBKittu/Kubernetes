@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nodeport-service
+  labels:
+    project: k2
+    company: clover
+spec:
+  - name: nginx
+    image: nginx
+    

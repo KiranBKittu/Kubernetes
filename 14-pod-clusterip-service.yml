@@ -1,3 +1,4 @@
+# creating service for cluster ip and if we won't provide type it takes default as cluster ip only
 apiVersion: v1
 kind: Pod
 metadata:
