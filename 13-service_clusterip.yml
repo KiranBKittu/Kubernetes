@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-cluster-1
+  name: demo-serclu-01
 spec:
   selector:
     project: k1
