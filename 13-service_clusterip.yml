@@ -8,5 +8,5 @@ spec:
     company: kvb
   ports:
   - protocal: Tcp
-    port: 80 #Service port
+    ports: 80 #Service port
     targetPort: 80 #Container port
