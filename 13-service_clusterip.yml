@@ -7,6 +7,6 @@ spec:
     project: k1
     company: kvb
   ports:
-  - protocal: Tcp
-    ports: 80 #Service port
+  - protocol: tcp
+    port: 80 #Service port
     targetPort: 80 #Container port
