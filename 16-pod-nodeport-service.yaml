@@ -8,4 +8,3 @@ metadata:
 spec:
   - name: nginx
     image: nginx
-    g
