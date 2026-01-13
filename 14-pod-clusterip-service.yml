@@ -6,8 +6,8 @@ metadata:
   labels: # these labels are used to register the pods with service this labels same as selector of 13-service.yml
     project: k1
     company: kvb
-  spec:
-    containers:
-      - name: nginx
-        image: nginx
+spec:
+  containers:
+    - name: nginx
+      image: nginx
 
