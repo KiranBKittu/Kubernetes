@@ -1,11 +1,9 @@
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
-
 metadata:
   name: Test12345
   region: us-east-1
   version: "1.29"  # optional, pick latest supported
-
 managedNodeGroups:
   - name: roboshop-dev
     instanceTypes: ["t3.small", "t3.medium"]
@@ -17,7 +15,6 @@ managedNodeGroups:
       company: clover
     tags:
       environment: dev
-
 cloudWatch:
   clusterLogging:
     enableTypes: ["api", "audit", "authenticator", "controllerManager", "scheduler"]
