@@ -3,20 +3,20 @@ kind: ReplicaSet
 metadata:
   name: nginx-rs
   labels:
-    purpose: rs-demo
+    purpose: rs-test
 spec:
   replicas: 3
   selector:
     matchLabels:
-      company: v1
+      company: clover
       employee: tester
   template:
     metadata:
       labels:
-        company: v1
+        company: clover
         employee: tester
     spec:
-      container:
+      containers:
         - name: nginx
           image: nginx
 
