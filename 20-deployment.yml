@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: nginx-trixie-perl
+          image: nginx/nginx-ingress:3.7.1-20241117-ubi
 
   
