@@ -1,24 +1,18 @@
 apiVersion: apps/v1
 kind: ReplicaSet
-metadata:
-  name: nginx-rs
-  labels:
-    purpose: rs-demo
+metadata: 
+  name: nginx-rs-demo
 spec:
   replicas: 3
   selector:
     matchLabels:
-      company: v1
-      employee: tester
+        app: nginx-01
   template:
     metadata:
       labels:
-        company: v1
-        employee: tester
+        app: nginx-01
     spec:
-      container:
+      containers:
         - name: nginx
           image: nginx
-
-
 
