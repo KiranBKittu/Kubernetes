@@ -17,6 +17,7 @@ spec:
         employee: dev
     spec:
       containers:
-        - name: nginx-trixie-perl
+        - name: nginx
+          image: nginx-trixie-perl
 
   
