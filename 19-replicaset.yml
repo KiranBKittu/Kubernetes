@@ -1,18 +1,19 @@
 apiVersion: apps/v1
 kind: ReplicaSet
+# for replica-set details
 metadata:
   name: nginx-rs
   labels:
     purpose: rs-test
 spec:
-  replicas: 3
+  replicas: 3 # number of pods to select
   selector:
-    matchLabels:
+    matchLabels: # to select pods, always run (replicas:3) 3 replicas template is responsilbe
       company: clover
       employee: tester
-  template:
+  template: # responsible if any desired no of pods down it filter and revert to selector matchLabelsand filters
     metadata:
-      labels:
+      labels: # metadata labels and selector matchLabels should be same, which is used for filter and start if any pods is down
         company: clover
         employee: tester
     spec:
