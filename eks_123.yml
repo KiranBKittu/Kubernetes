@@ -9,5 +9,3 @@ managedNodeGroups:
     # if not works will use m7i-flex.large but it is costly
     desiredCapacity: 2  # default is 3
     spot: true     # if we keep spot: true it reduces cost
-    securityGroups:
-      withShared: true  # attaches ClusterSharedNodeSG automatically
