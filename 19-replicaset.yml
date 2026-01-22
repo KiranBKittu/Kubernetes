@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: ReplicaSet
 metadata: 
-  name: nginx-rs
+  name: nginx-ras
 spec:
   replicas: 3
   selector:
-    matachLabels:
+    matchLabels:
       labels:
         app: nginx-01
   template:
