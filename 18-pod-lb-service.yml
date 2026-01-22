@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: lb-service
+  labels:
+    project: roboshop # labels should match selector of 17-service-lb.yml pod creating based on that.
+    company: frontend
+spec:
+  containers:
+    - name: nginx
+      image: nginx
