@@ -18,6 +18,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: nginx:1.25.2
+          # image: nginx:1.25.2 # old nginx image for testing
+          image: nginx
 
   
