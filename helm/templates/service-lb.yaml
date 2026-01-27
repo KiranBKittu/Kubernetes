@@ -7,7 +7,6 @@ spec:
   #LoadBalancer
   selector:
     company: wipro
-    employee: dev
   ports:
     - protocol: {{ .Values.service.protocol }}
      # TCP

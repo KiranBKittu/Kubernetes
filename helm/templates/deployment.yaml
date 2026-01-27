@@ -4,23 +4,48 @@ metadata:
   name: nginx-deployment
   labels:
     company: wipro
-    employee: dev
 spec: 
   replicas: {{ .Values.deployment.replicas }} 
   #3 # deployment defination starts from here
   selector:
     matchLabels:
       company: wipro
-      employee: dev
   template: # pod defination start from here
     metadata:
       labels:
         company: wipro
-        employee: dev
     spec:
       containers:
         - name: nginx
           # image: nginx:1.25.2 # old nginx image for testing
           image: nginx
 
-  
+---
+# for pod affinity
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pod-anti-affinity
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      company: wipro
+  template:
+    metadata:
+      labels:
+      company: wipro
+    spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: company
+                    operator: In
+                    values:
+                      - wipro
+              topologyKey: "kubernetes.io/hostname"
+      containers:
+        - name: nginx
+          image: nginx
