@@ -1,0 +1,5 @@
+apiVersion: v2
+name: nginx # Chart name
+version: 1.0.0 # Chart Version
+description: testion 001 
+appVersion: nginx:latest # this is application version
