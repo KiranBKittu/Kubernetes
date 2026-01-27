@@ -27,7 +27,7 @@ kind: Deployment
 metadata:
   name: pod-anti-affinity
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       company: wipro
