@@ -9,14 +9,13 @@ spec:
   affinity:
     podAntiAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
-        - podAffinityTerm:
-           labelSelector:
-             matchExpressions:
-                - key: project
-                  operator: In
-                  values:
-                  - test
-          topologyKey: "kubernetes.io/hostname"
+        - labelSelector:
+            matchExpressions:
+            - key: project
+              operator: In
+              values:
+              - test
+            topologyKey: "kubernetes.io/hostname"
   containers:
     - name: nginx
       image: nginx
