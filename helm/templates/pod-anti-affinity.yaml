@@ -1,0 +1,21 @@
+#Hard Rule
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod-1
+  labels:
+    app: nginx
+spec:
+  affinity:
+    podAntiAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+       - labelSelector:
+            matchExpressions:
+            - key: project
+            operator: In
+            values:
+            - test
+  topologyKey: "kubernetes.io/hostname"
+  containers:
+    - name: nginx
+      image: nginx
