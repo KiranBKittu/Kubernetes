@@ -5,8 +5,8 @@ metadata:
 spec:
   type: {{ .Values.service.type }} #LoadBalancer
   selector:
-    project: roboshop
-    company: frontend
+    company: wipro
+    employee: dev
   ports:
     - protocol: {{ .Values.service.protocol }} # TCP
       port: 80
