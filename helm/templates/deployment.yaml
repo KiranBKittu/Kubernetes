@@ -34,7 +34,7 @@ spec:
   template:
     metadata:
       labels:
-      company: wipro
+        company: wipro
     spec:
       affinity:
         podAntiAffinity:
