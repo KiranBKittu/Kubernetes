@@ -4,7 +4,7 @@ kind: Pod
 metadata:
   name: nginx-pod-1
   labels:
-    app: nginx
+    project: test
 spec:
   affinity:
     podAntiAffinity:
