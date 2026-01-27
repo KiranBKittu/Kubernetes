@@ -15,7 +15,7 @@ spec:
             operator: In
             values:
             - test
-  topologyKey: "kubernetes.io/hostname"
+      topologyKey: "kubernetes.io/hostname"
   containers:
     - name: nginx
       image: nginx
