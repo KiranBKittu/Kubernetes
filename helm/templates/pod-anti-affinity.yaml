@@ -4,17 +4,17 @@ kind: Pod
 metadata:
   name: nginx-pod-1
   labels:
-    project: test
+    company: wipro
 spec:
   affinity:
     podAntiAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
         - labelSelector:
             matchExpressions:
-            - key: project
+            - key: company
               operator: In
               values:
-              - test
+              - wipro
           topologyKey: "kubernetes.io/hostname"
   containers:
     - name: nginx
