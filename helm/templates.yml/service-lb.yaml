@@ -3,12 +3,14 @@ kind: Service
 metadata:
   name: service-lb
 spec:
-  type: {{ .Values.service.type }} #LoadBalancer
+  type: {{ .Values.service.type }} 
+  #LoadBalancer
   selector:
     company: wipro
     employee: dev
   ports:
-    - protocol: {{ .Values.service.protocol }} # TCP
+    - protocol: {{ .Values.service.protocol }}
+     # TCP
       port: 80
       targetPort: 80
       nodePort: 30037

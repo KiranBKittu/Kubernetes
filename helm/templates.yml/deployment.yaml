@@ -6,7 +6,8 @@ metadata:
     company: wipro
     employee: dev
 spec: 
-  replicas: {{ .Values.deployment.replicas }} #3 # deployment defination starts from here
+  replicas: {{ .Values.deployment.replicas }} 
+  #3 # deployment defination starts from here
   selector:
     matchLabels:
       company: wipro
