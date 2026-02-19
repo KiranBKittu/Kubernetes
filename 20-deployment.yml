@@ -5,7 +5,7 @@ metadata:
   labels:
     purpose: dp-demo
 spec: 
-  replicas: 3 # deployment defination starts from here
+  replicas: 2 # deployment defination starts from here
   selector:
     matchLabels:
       company: wipro
